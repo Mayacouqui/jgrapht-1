@@ -34,6 +34,8 @@ checkstyle-all-3.1.jar
 
 The build-time Checkstyle library executed from ant.  This is only
 required during build, and does not need to be distributed.
+Checkstyle is licensed under the terms of the GNU Lesser General
+Public License.
 
 You can find out more about Checkstyle and/or download the latest
 version from http://checkstyle.sourceforge.net. You will also find
