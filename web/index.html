@@ -46,7 +46,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   <meta name="Author" content="Barak Naveh">
-  <meta name="keywords" content="JGraphT, graph, theory, graph-theory, free, java, LGPL, open-source">
+  <meta name="keywords" content="JGraphT, graph, theory, graph-theory, free, java, LGPL, JGraph, open-source">
   <title>Welcome to JGraphT</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -76,10 +76,10 @@ various types of graphs including: </p>
   other graphs.</li>
   <li>all compositions of above graphs.</li>
 </ul>
-<p>Although powerful, the JGraphT API is designed to be
-<b>simple</b>. For example, graph vertices can be of any objects. This allows 
-you to create graphs based on: Strings, URLs, XML documents, etc; you can even create graphs of graphs!
-<a href="HelloJGraphT.java.html">This code example</a> shows how it works.</p>
+<p>Although powerful, JGraphT is designed to be <b>simple</b>. For example,
+graph vertices can be of any objects. You can create graphs based on: Strings,
+URLs, XML documents, etc; you can even create graphs of graphs! This
+<a href="HelloJGraphT.java.html">code example</a> shows how.</p>
 <p>Other features offered by JGraphT:</p>
 
 <ul>
@@ -90,53 +90,6 @@ you to create graphs based on: Strings, URLs, XML documents, etc; you can even c
   <li>comprehensive <a href="http://jgrapht.sourceforge.net/javadoc">Javadocs</a>.</li>
   <li>easy extensibility.</li>
 </ul>
-
-
-
-
-
-<h2>JGraphT vs. JGraph</h2>
-
-
-
-
-
-<p dir="ltr">JGraphT and JGraph are two different libraries which are optimized 
-for different purposes. </p>
-
-
-
-
-
-<p>JGraphT:</p>
-<ul>
-  <li>is optimized for algorithms.</li>
-  <li>has a clean and simple API that is designed for a safe &quot;auto-complete 
-  programming&quot;.</li>
-  <li>is designed for high-performance and for large-scale applications.</li>
-  <li>provides visualizations by using JGraph (<a href="visualizations.html">demo</a>).</li>
-</ul>
-
-
-
-
-
-<p>JGraph:</p>
-<ul>
-  <li>is a swing-style graph component optimized for visualization and GUI-based editing.</li>
-  <li>has a complicated API with non-trivial casting; <span class="hw">requires 
-  fluency with documentation.</span></li>
-  <li>is slower and consumes more resources.</li>
-  <li>currently does not use JGraphT algorithms.</li>
-</ul>
-
-
-
-
-
-<p>You will probably find JGraphT easier to start with and more eligible for 
-many applications. However, if your application is primarily graph visualization 
-or GUI-based  editing, you may find the JGraphT benefits less compelling.</p>
 
 
 
@@ -177,7 +130,7 @@ SourceForge:</p>
 <p>
 
 <p>
-Note that there are two downloads, one for Windows-based systems, and one 
+There are two downloads, one for Windows-based systems, and one 
 for Linux/Unix-based systems. The downloads contain identical Java source code 
 and a <code>README.html</code> file to help you to get started.</p>
 
@@ -186,35 +139,89 @@ and a <code>README.html</code> file to help you to get started.</p>
 
 <p>
 The
-<a href="http://jgrapht.sourceforge.net/javadoc">JavaDoc HTML files</a> 
-are available online. They are also included in the downloads in case you wish to 
-view them locally.</p>
+<a href="http://jgrapht.sourceforge.net/javadoc">JavaDoc files</a> 
+are available online. They are also included in the downloads so you
+can view them locally.</p>
 
 
 
 <h2>Support</h2>
 <p>The <a href="http://sourceforge.net/projects/jgrapht">JGraphT project</a> is 
-maintained at SourceForge, where you can find the following support facilities:</p>
+maintained at SourceForge, where you can:</p>
 
 
 
 
 <ul>
-  <li>the <a href="http://sourceforge.net/tracker/?group_id=86459&amp;atid=579690">
-  feature tracker</a> - use it to request new features for JGraphT.</li>
-  <li>the <a href="http://sourceforge.net/tracker/?group_id=86459&amp;atid=579687">
-  bug tracker</a> - use it to report bugs in JGraphT.</li>
-  <li>the <a href="http://sourceforge.net/forum/forum.php?forum_id=296039">help 
-  forum</a> - use it to post your JGraphT questions an to find answers.</li>
+  <li><b>Get help</b> via the JGraphT
+  <a href="http://lists.sourceforge.net/lists/listinfo/jgrapht-users">users 
+  mailing list</a> or via the <a href="http://sourceforge.net/forum/forum.php?forum_id=296039">help 
+  forum</a>.</li>
+  <li><b>Stay informed</b> on new releases via the
+  <a href="http://lists.sourceforge.net/lists/listinfo/jgrapht-announce">
+  announce mailing list</a>.</li>
+  <li><b>Request a new feature</b> for JGraphT using the
+  <a href="http://sourceforge.net/tracker/?group_id=86459&amp;atid=579690">feature tracker</a>.</li>
+  <li><b>Report a bug</b> you might have found in JGraphT using the
+  <a href="http://sourceforge.net/tracker/?group_id=86459&amp;atid=579687">bug 
+  tracker</a>.</li>
 </ul>
 
 
 
 
-<p><b>If you are reporting a bug</b>, please describe a reproducing scenario.&nbsp;If 
+<p>If you are reporting a bug, please describe a reproducing scenario.&nbsp;If 
 possible, attach a small program with a description of what is  wrong and 
-need of fixing. </p>
+needs fixing. </p>
 <p>If you need a bug fixed <i>really</i> urgently, use the source... </p>
+
+
+
+
+
+<h2>JGraphT vs. JGraph</h2>
+
+
+
+
+
+<p dir="ltr">JGraphT and JGraph are two different libraries which are optimized 
+for different purposes. </p>
+
+
+
+
+
+<p>JGraphT:</p>
+<ul>
+  <li>is optimized for data models and algorithms.</li>
+  <li>has a clean and simple API that is designed for a safe &quot;auto-complete 
+  programming&quot;.</li>
+  <li>is designed to support high-performance and large-scale applications.</li>
+  <li>can handle graphs with a few <i>millions</i> vertices and edges.</li>
+  <li>provides visualizations by using JGraph (<a href="visualizations.html">demo</a>).</li>
+</ul>
+
+
+
+
+
+<p>JGraph:</p>
+<ul>
+  <li>is a swing-style graph component optimized for visualization and GUI-based editing.</li>
+  <li>has a more complicated API with non-trivial casting and swing dependency; <span class="hw">requires 
+  fluency with its documentation.</span></li>
+  <li>is slower and consumes more resources.</li>
+</ul>
+
+
+
+
+
+<p dir="ltr">The two libraries are complementary and can be used together. You will probably find JGraphT easier to start with and more eligible for 
+your data model. When you need graph visualizations, you can add JGraph to do 
+them for you.</p>
+
 
 
 
