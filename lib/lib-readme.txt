@@ -4,9 +4,9 @@
 
 This folder contains jar files of libraries used by JGraphT:
 
-------------------------
-jgraph.jar (version 4.0)
-------------------------
+--------------------------
+jgraph.jar (version 5.3.1)
+--------------------------
 
 The runtime library of the JGraph project. The JGraph library is licensed under
 the terms of the GNU Lesser General Public License (LGPL), as with JGraphT.
@@ -15,6 +15,7 @@ You can find out more about JGraph and/or download the latest version from
 http://jgraph.sourceforge.net. You will also find there the source code of the
 JGraph library.
 
+Note: the JGraph jar in this folder is the build for Java 1.3.
 
 -------------------------
 junit.jar (version 3.8.1)
