@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>HelloJGraphT</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<!-- ViewCVS       -- http://viewcvs.sourceforge.net/
+     by Greg Stein -- mailto:gstein@lyra.org -->
+</HEAD>
+<BODY bgColor="#FAFBFF">
+<PRE><I><FONT color=#b22222>/* ==========================================
+ * JGraphT : a free Java graph-theory library
+ * ==========================================
+ *
+ * Project Info:  http://jgrapht.sourceforge.net/
+ * Project Lead:  Barak Naveh (barak_naveh@users.sourceforge.net)
+ *
+ * (C) Copyright 2003, by Barak Naveh and Contributors.
+ *
+ * This library is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation; either version 2.1 of the License, or
+ * (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public
+ * License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this library; if not, write to the Free Software Foundation, Inc.,
+ * 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
+ */</FONT></I>
+<I><FONT color=#b22222>/* -----------------
+ * HelloJGraphT.java
+ * -----------------
+ * (C) Copyright 2003, by Barak Naveh and Contributors.
+ *
+ * Original Author:  Barak Naveh
+ * Contributor(s):   -
+ *
+ * $Id$
+ *
+ * Changes
+ * -------
+ * 27-Jul-2003 : Initial revision (BN);
+ *
+ */</FONT></I>
+<B><FONT color=#a020f0>package</FONT></B> org._3pq.jgrapht.demo;
+
+<B><FONT color=#a020f0>import</FONT></B> java.net.MalformedURLException;
+<B><FONT color=#a020f0>import</FONT></B> java.net.URL;
+
+<B><FONT color=#a020f0>import</FONT></B> org._3pq.jgrapht.DirectedGraph;
+<B><FONT color=#a020f0>import</FONT></B> org._3pq.jgrapht.GraphFactory;
+<B><FONT color=#a020f0>import</FONT></B> org._3pq.jgrapht.UndirectedGraph;
+
+<I><FONT color=#b22222>/**
+ * A simple introduction to using JGraphT.
+ *
+ * @author Barak Naveh
+ *
+ * @since Jul 27, 2003
+ */</FONT></I>
+<B><FONT color=#a020f0>public</FONT></B> <B><FONT color=#a020f0>class</FONT></B> HelloJGraphT {
+    <I><FONT color=#b22222>/**
+     * The starting point for the demo.
+     *
+     * @param args ignored.
+     */</FONT></I>
+    <B><FONT color=#a020f0>public</FONT></B> <B><FONT color=#a020f0>static</FONT></B> <B><FONT color=#a020f0>void</FONT></B> main( String[] args ) {
+        UndirectedGraph stringGraph = createStringGraph(  );
+
+        <I><FONT color=#b22222>// note undirected edges are printed as: {&lt;v1&gt;,&lt;v2&gt;}
+</FONT></I>        System.out.println( stringGraph.toString(  ) );
+
+        <I><FONT color=#b22222>// create a graph based on URL objects
+</FONT></I>        DirectedGraph hrefGraph = createHrefGraph(  );
+
+        <I><FONT color=#b22222>// note directed edges are printed as: (&lt;v1&gt;,&lt;v2&gt;)
+</FONT></I>        System.out.println( hrefGraph.toString(  ) );
+    }
+
+
+    <I><FONT color=#b22222>/**
+     * Creates a toy directed graph based on URL objects that represents link
+     * structure.
+     *
+     * @return a graph based on URL objects.
+     */</FONT></I>
+    <B><FONT color=#a020f0>private</FONT></B> <B><FONT color=#a020f0>static</FONT></B> DirectedGraph createHrefGraph(  ) {
+        GraphFactory  gf = GraphFactory.getFactory(  );
+
+        DirectedGraph g = gf.createDirectedGraph(  );
+
+        <B><FONT color=#a020f0>try</FONT></B> {
+            URL amazon = <B><FONT color=#a020f0>new</FONT></B> URL( <B><FONT color=#bc8f8f>"http://www.amazon.com"</FONT></B> );
+            URL yahoo = <B><FONT color=#a020f0>new</FONT></B> URL( <B><FONT color=#bc8f8f>"http://www.yahoo.com"</FONT></B> );
+            URL ebay  = <B><FONT color=#a020f0>new</FONT></B> URL( <B><FONT color=#bc8f8f>"http://www.ebay.com"</FONT></B> );
+
+            <I><FONT color=#b22222>// add the vertices
+</FONT></I>            g.addVertex( amazon );
+            g.addVertex( yahoo );
+            g.addVertex( ebay );
+
+            <I><FONT color=#b22222>// add edges to create linking structure
+</FONT></I>            g.addEdge( yahoo, amazon );
+            g.addEdge( yahoo, ebay );
+        }
+         <B><FONT color=#a020f0>catch</FONT></B>( MalformedURLException e ) {
+            e.printStackTrace(  );
+        }
+
+        <B><FONT color=#a020f0>return</FONT></B> g;
+    }
+
+
+    <I><FONT color=#b22222>/**
+     * Craete a toy graph based on String objects.
+     *
+     * @return a graph based on String objects.
+     */</FONT></I>
+    <B><FONT color=#a020f0>private</FONT></B> <B><FONT color=#a020f0>static</FONT></B> UndirectedGraph createStringGraph(  ) {
+        GraphFactory    gf = GraphFactory.getFactory(  );
+
+        UndirectedGraph g = gf.createSimpleGraph(  );
+
+        String          v1 = <B><FONT color=#bc8f8f>"v1"</FONT></B>;
+        String          v2 = <B><FONT color=#bc8f8f>"v2"</FONT></B>;
+        String          v3 = <B><FONT color=#bc8f8f>"v3"</FONT></B>;
+        String          v4 = <B><FONT color=#bc8f8f>"v4"</FONT></B>;
+
+        <I><FONT color=#b22222>// add the vertices
+</FONT></I>        g.addVertex( v1 );
+        g.addVertex( v2 );
+        g.addVertex( v3 );
+        g.addVertex( v4 );
+
+        <I><FONT color=#b22222>// add edges to create a circuit
+</FONT></I>        g.addEdge( v1, v2 );
+        g.addEdge( v2, v3 );
+        g.addEdge( v3, v4 );
+        g.addEdge( v4, v1 );
+
+        <B><FONT color=#a020f0>return</FONT></B> g;
+    }
+}
+</PRE>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr align="right">
+    <td>
+<!-- Begin Nedstat Basic code -->
+<!-- Title: HelloJGraphT -->
+<!-- URL: http://jgrapht.sourceforge.net/HelloJGraphT.java.html -->
+<script language="JavaScript" type="text/javascript" src="http://m1.nedstatbasic.net/basic.js">
+</script>
+<script language="JavaScript" type="text/javascript" >
+<!--
+  nedstatbasic("ACWY7A7hPOVUZM8+AnbQcErpUVfA", 0);
+// -->
+</script>
+<noscript>
+<a target="_blank" href="http://v1.nedstatbasic.net/stats?ACWY7A7hPOVUZM8+AnbQcErpUVfA"><img
+src="http://m1.nedstatbasic.net/n?id=ACWY7A7hPOVUZM8+AnbQcErpUVfA"
+border="0" nosave width="18" height="18"
+alt="Nedstat Basic - Free web site statistics"></a></noscript>
+<!-- End Nedstat Basic code -->
+    </td>
+  </tr>
+</table>
+
+
+</BODY></HTML>
