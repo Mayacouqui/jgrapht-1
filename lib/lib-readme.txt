@@ -5,7 +5,7 @@
 This folder contains jar files of libraries used by JGraphT:
 
 ------------------------
-jgraph.jar (version 3.0)
+jgraph.jar (version 3.1)
 ------------------------
 
 The runtime library of the JGraph project. The JGraph library is licensed under
