@@ -28,3 +28,13 @@ http://www.junit.org. You will also find there the source code of the JUnit
 library.
 
 
+----------------------
+checkstyle-all-3.1.jar
+----------------------
+
+The build-time Checkstyle library executed from ant.  This is only
+required during build, and does not need to be distributed.
+
+You can find out more about Checkstyle and/or download the latest
+version from http://checkstyle.sourceforge.net. You will also find
+there the source code of Checkstyle.
