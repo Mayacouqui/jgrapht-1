@@ -5,7 +5,7 @@
      by Greg Stein -- mailto:gstein@lyra.org -->
 </HEAD>
 <BODY bgColor="#FAFBFF">
-<PRE><I><FONT color=#b22222>/* ==========================================
+<PRE><I><FONT COLOR="#B22222">/* ==========================================
  * JGraphT : a free Java graph-theory library
  * ==========================================
  *
@@ -28,7 +28,7 @@
  * along with this library; if not, write to the Free Software Foundation, Inc.,
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
  */</FONT></I>
-<I><FONT color=#b22222>/* -----------------
+<I><FONT COLOR="#B22222">/* -----------------
  * HelloJGraphT.java
  * -----------------
  * (C) Copyright 2003, by Barak Naveh and Contributors.
@@ -43,103 +43,100 @@
  * 27-Jul-2003 : Initial revision (BN);
  *
  */</FONT></I>
-<B><FONT color=#a020f0>package</FONT></B> org._3pq.jgrapht.demo;
+<B><FONT COLOR="#A020F0">package</FONT></B> org._3pq.jgrapht.demo;
 
-<B><FONT color=#a020f0>import</FONT></B> java.net.MalformedURLException;
-<B><FONT color=#a020f0>import</FONT></B> java.net.URL;
+<B><FONT COLOR="#A020F0">import</FONT></B> java.net.MalformedURLException;
+<B><FONT COLOR="#A020F0">import</FONT></B> java.net.URL;
 
-<B><FONT color=#a020f0>import</FONT></B> org._3pq.jgrapht.DirectedGraph;
-<B><FONT color=#a020f0>import</FONT></B> org._3pq.jgrapht.GraphFactory;
-<B><FONT color=#a020f0>import</FONT></B> org._3pq.jgrapht.UndirectedGraph;
+<B><FONT COLOR="#A020F0">import</FONT></B> org._3pq.jgrapht.DirectedGraph;
+<B><FONT COLOR="#A020F0">import</FONT></B> org._3pq.jgrapht.UndirectedGraph;
+<B><FONT COLOR="#A020F0">import</FONT></B> org._3pq.jgrapht.graph.DefaultDirectedGraph;
+<B><FONT COLOR="#A020F0">import</FONT></B> org._3pq.jgrapht.graph.SimpleGraph;
 
-<I><FONT color=#b22222>/**
+<I><FONT COLOR="#B22222">/**
  * A simple introduction to using JGraphT.
  *
  * @author Barak Naveh
  *
  * @since Jul 27, 2003
  */</FONT></I>
-<B><FONT color=#a020f0>public</FONT></B> <B><FONT color=#a020f0>class</FONT></B> HelloJGraphT {
-    <I><FONT color=#b22222>/**
+<B><FONT COLOR="#A020F0">public</FONT></B> <B><FONT COLOR="#A020F0">class</FONT></B> HelloJGraphT {
+    <I><FONT COLOR="#B22222">/**
      * The starting point for the demo.
      *
      * @param args ignored.
      */</FONT></I>
-    <B><FONT color=#a020f0>public</FONT></B> <B><FONT color=#a020f0>static</FONT></B> <B><FONT color=#a020f0>void</FONT></B> main( String[] args ) {
+    <B><FONT COLOR="#A020F0">public</FONT></B> <B><FONT COLOR="#A020F0">static</FONT></B> <B><FONT COLOR="#A020F0">void</FONT></B> main( String[] args ) {
         UndirectedGraph stringGraph = createStringGraph(  );
 
-        <I><FONT color=#b22222>// note undirected edges are printed as: {&lt;v1&gt;,&lt;v2&gt;}
+        <I><FONT COLOR="#B22222">// note undirected edges are printed as: {&lt;v1&gt;,&lt;v2&gt;}
 </FONT></I>        System.out.println( stringGraph.toString(  ) );
 
-        <I><FONT color=#b22222>// create a graph based on URL objects
+        <I><FONT COLOR="#B22222">// create a graph based on URL objects
 </FONT></I>        DirectedGraph hrefGraph = createHrefGraph(  );
 
-        <I><FONT color=#b22222>// note directed edges are printed as: (&lt;v1&gt;,&lt;v2&gt;)
+        <I><FONT COLOR="#B22222">// note directed edges are printed as: (&lt;v1&gt;,&lt;v2&gt;)
 </FONT></I>        System.out.println( hrefGraph.toString(  ) );
     }
 
 
-    <I><FONT color=#b22222>/**
+    <I><FONT COLOR="#B22222">/**
      * Creates a toy directed graph based on URL objects that represents link
      * structure.
      *
      * @return a graph based on URL objects.
      */</FONT></I>
-    <B><FONT color=#a020f0>private</FONT></B> <B><FONT color=#a020f0>static</FONT></B> DirectedGraph createHrefGraph(  ) {
-        GraphFactory  gf = GraphFactory.getFactory(  );
+    <B><FONT COLOR="#A020F0">private</FONT></B> <B><FONT COLOR="#A020F0">static</FONT></B> DirectedGraph createHrefGraph(  ) {
+        DirectedGraph g = <B><FONT COLOR="#A020F0">new</FONT></B> DefaultDirectedGraph(  );
 
-        DirectedGraph g = gf.createDirectedGraph(  );
+        <B><FONT COLOR="#A020F0">try</FONT></B> {
+            URL amazon = <B><FONT COLOR="#A020F0">new</FONT></B> URL( <B><FONT COLOR="#BC8F8F">&quot;http://www.amazon.com&quot;</FONT></B> );
+            URL yahoo = <B><FONT COLOR="#A020F0">new</FONT></B> URL( <B><FONT COLOR="#BC8F8F">&quot;http://www.yahoo.com&quot;</FONT></B> );
+            URL ebay  = <B><FONT COLOR="#A020F0">new</FONT></B> URL( <B><FONT COLOR="#BC8F8F">&quot;http://www.ebay.com&quot;</FONT></B> );
 
-        <B><FONT color=#a020f0>try</FONT></B> {
-            URL amazon = <B><FONT color=#a020f0>new</FONT></B> URL( <B><FONT color=#bc8f8f>"http://www.amazon.com"</FONT></B> );
-            URL yahoo = <B><FONT color=#a020f0>new</FONT></B> URL( <B><FONT color=#bc8f8f>"http://www.yahoo.com"</FONT></B> );
-            URL ebay  = <B><FONT color=#a020f0>new</FONT></B> URL( <B><FONT color=#bc8f8f>"http://www.ebay.com"</FONT></B> );
-
-            <I><FONT color=#b22222>// add the vertices
+            <I><FONT COLOR="#B22222">// add the vertices
 </FONT></I>            g.addVertex( amazon );
             g.addVertex( yahoo );
             g.addVertex( ebay );
 
-            <I><FONT color=#b22222>// add edges to create linking structure
+            <I><FONT COLOR="#B22222">// add edges to create linking structure
 </FONT></I>            g.addEdge( yahoo, amazon );
             g.addEdge( yahoo, ebay );
         }
-         <B><FONT color=#a020f0>catch</FONT></B>( MalformedURLException e ) {
+         <B><FONT COLOR="#A020F0">catch</FONT></B>( MalformedURLException e ) {
             e.printStackTrace(  );
         }
 
-        <B><FONT color=#a020f0>return</FONT></B> g;
+        <B><FONT COLOR="#A020F0">return</FONT></B> g;
     }
 
 
-    <I><FONT color=#b22222>/**
+    <I><FONT COLOR="#B22222">/**
      * Craete a toy graph based on String objects.
      *
      * @return a graph based on String objects.
      */</FONT></I>
-    <B><FONT color=#a020f0>private</FONT></B> <B><FONT color=#a020f0>static</FONT></B> UndirectedGraph createStringGraph(  ) {
-        GraphFactory    gf = GraphFactory.getFactory(  );
+    <B><FONT COLOR="#A020F0">private</FONT></B> <B><FONT COLOR="#A020F0">static</FONT></B> UndirectedGraph createStringGraph(  ) {
+        UndirectedGraph g = <B><FONT COLOR="#A020F0">new</FONT></B> SimpleGraph(  );
 
-        UndirectedGraph g = gf.createSimpleGraph(  );
+        String          v1 = <B><FONT COLOR="#BC8F8F">&quot;v1&quot;</FONT></B>;
+        String          v2 = <B><FONT COLOR="#BC8F8F">&quot;v2&quot;</FONT></B>;
+        String          v3 = <B><FONT COLOR="#BC8F8F">&quot;v3&quot;</FONT></B>;
+        String          v4 = <B><FONT COLOR="#BC8F8F">&quot;v4&quot;</FONT></B>;
 
-        String          v1 = <B><FONT color=#bc8f8f>"v1"</FONT></B>;
-        String          v2 = <B><FONT color=#bc8f8f>"v2"</FONT></B>;
-        String          v3 = <B><FONT color=#bc8f8f>"v3"</FONT></B>;
-        String          v4 = <B><FONT color=#bc8f8f>"v4"</FONT></B>;
-
-        <I><FONT color=#b22222>// add the vertices
+        <I><FONT COLOR="#B22222">// add the vertices
 </FONT></I>        g.addVertex( v1 );
         g.addVertex( v2 );
         g.addVertex( v3 );
         g.addVertex( v4 );
 
-        <I><FONT color=#b22222>// add edges to create a circuit
+        <I><FONT COLOR="#B22222">// add edges to create a circuit
 </FONT></I>        g.addEdge( v1, v2 );
         g.addEdge( v2, v3 );
         g.addEdge( v3, v4 );
         g.addEdge( v4, v1 );
 
-        <B><FONT color=#a020f0>return</FONT></B> g;
+        <B><FONT COLOR="#A020F0">return</FONT></B> g;
     }
 }</PRE>
 
