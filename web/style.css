@@ -8,12 +8,12 @@ a {
 	COLOR: #336699; 
 	TEXT-DECORATION: underline;
 }
-a:hover {
-	color: #FF9900; 
-	TEXT-DECORATION: underline;
-}
 a:visited {
 	color: #663366; 
+	TEXT-DECORATION: underline;
+}
+a:hover {
+	color: #FF9900; 
 	TEXT-DECORATION: underline;
 }
 code {
@@ -49,8 +49,6 @@ h1 {
 	border-bottom:1px solid #245BCB; 
 	color:#FFFFFF;
 	text-align:center;
-	padding-top: 18;
-	padding-bottom: 18;
 }
  
 h2 {
