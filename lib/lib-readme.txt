@@ -4,9 +4,9 @@
 
 This folder contains jar files of libraries used by JGraphT:
 
---------------------------
+----------------------------
 jgraph.jar (version 5.6.1.1)
---------------------------
+----------------------------
 
 The runtime library of the JGraph project. The JGraph library is licensed under
 the terms of the GNU Lesser General Public License (LGPL), as with JGraphT.
@@ -41,3 +41,14 @@ Public License.
 You can find out more about Checkstyle and/or download the latest
 version from http://checkstyle.sourceforge.net. You will also find
 there the source code of Checkstyle.
+
+--------------------------------
+TGGraphLayout.jar (version 1.22)
+--------------------------------
+
+The layout library of the Touchgraph project. The Touchgraph library is
+licensed under an Apache-style license; see TG-APACHE-LICENSE.txt.
+
+You can find out more about Touchgraph and/or download the latest version from 
+http://www.touchgraph.com. You can find the source code of the
+Touchgraph library at http://sourceforge.net/projects/touchgraph.
