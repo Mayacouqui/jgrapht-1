@@ -39,3 +39,9 @@ licensed under an Apache-style license; see TG-APACHE-LICENSE.txt.
 You can find out more about Touchgraph and/or download the latest version from 
 http://www.touchgraph.com. You can find the source code of the
 Touchgraph library at http://sourceforge.net/projects/touchgraph.
+
+------------------------
+svn*.jar (version 1.0.0)
+------------------------
+
+The svn ant task from http://subclipse.tigris.org/svnant/svn.html
