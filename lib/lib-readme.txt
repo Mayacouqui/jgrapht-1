@@ -4,9 +4,9 @@
 
 This folder contains jar files of libraries used by JGraphT:
 
-----------------------------
-jgraph.jar (version 5.6.1.1)
-----------------------------
+-----------------------------------
+jgraph.jar (version 5.8.3.2-Munich)
+-----------------------------------
 
 The runtime library of the JGraph project. The JGraph library is licensed under
 the terms of the GNU Lesser General Public License (LGPL), as with JGraphT.
@@ -27,6 +27,10 @@ licensed under the terms of the IBM Common Public License.
 You can find out more about JUnit and/or download the latest version from 
 http://www.junit.org. You will also find there the source code of the JUnit 
 library.
+
+Note that we haven't upgraded to JUnit 4.0 yet because it is not
+compatible JGraphT's retroweaver backport.  (We could probably
+retroweave JUnit itself to solve this.)
 
 
 --------------------------------
