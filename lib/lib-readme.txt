@@ -49,3 +49,15 @@ svn*.jar (version 1.0.0)
 ------------------------
 
 The svn ant task from http://subclipse.tigris.org/svnant/svn.html
+
+----------------------------
+xmlunit1.0.jar (version 1.0)
+----------------------------
+
+The runtime library for the XMLUnit extension to JUnit.  The XMLUnit
+library is licensed under the terms of the BSD License.
+
+You can find out more about XMLUnit and/or download the latest version
+from http://xmlunit.sourceforge.net. You will also find there the
+source code of the xmlunit library.
+
