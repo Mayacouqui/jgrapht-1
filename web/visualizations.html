@@ -96,7 +96,7 @@ graph you just need to initialize JGraph via that adapter. </p>
 
 <p>
 <pre><i><font color="#b22222">     // create a JGraphT graph</font></i>
-     ListenableGraph g = <B><FONT color=#a020f0>new</FONT></B> ListenableDirectedGraph(  );
+     ListenableGraph g = <B><FONT color=#a020f0>new</FONT></B> ListenableDirectedGraph( DefaultEdge.class );
 
      <i><font color="#b22222">// create a visualization using JGraph, via the adapter</font></i>
       JGraph jgraph = <b><font color="#a020f0">new</font></b> JGraph( <b><font color="#a020f0">new</font></b> JGraphModelAdapter( g ) );
@@ -155,6 +155,7 @@ JGraphT distribution (<a href="http://sourceforge.net/project/showfiles.php?grou
 <B><FONT color=#a020f0>import</FONT></B> org.jgrapht.ListenableGraph;
 <B><FONT color=#a020f0>import</FONT></B> org.jgrapht.ext.JGraphModelAdapter;
 <B><FONT color=#a020f0>import</FONT></B> org.jgrapht.graph.ListenableDirectedGraph;
+<B><FONT color=#a020f0>import</FONT></B> org.jgrapht.graph.DefaultEdge;
 
 <I><FONT color=#b22222>/**
  * A demo applet that shows how to use JGraph to visualize JGraphT graphs.
@@ -175,7 +176,7 @@ JGraphT distribution (<a href="http://sourceforge.net/project/showfiles.php?grou
      */</FONT></I>
     <B><FONT color=#a020f0>public</FONT></B> <B><FONT color=#a020f0>void</FONT></B> init(  ) {
         <I><FONT color=#b22222>// create a JGraphT graph
-</FONT></I>        ListenableGraph g = <B><FONT color=#a020f0>new</FONT></B> ListenableDirectedGraph(  );
+</FONT></I>        ListenableGraph g = <B><FONT color=#a020f0>new</FONT></B> ListenableDirectedGraph( DefaultEdge.class );
 
         <I><FONT color=#b22222>// create a visualization using JGraph, via an adapter
 </FONT></I>        m_jgAdapter = <B><FONT color=#a020f0>new</FONT></B> JGraphModelAdapter( g );
