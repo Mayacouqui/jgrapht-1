@@ -28,11 +28,6 @@ You can find out more about JUnit and/or download the latest version from
 http://www.junit.org. You will also find there the source code of the JUnit 
 library.
 
-Note that we haven't upgraded to JUnit 4.0 yet because it is not
-compatible JGraphT's retroweaver backport.  (We could probably
-retroweave JUnit itself to solve this.)
-
-
 --------------------------------
 TGGraphLayout.jar (version 1.22)
 --------------------------------
