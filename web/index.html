@@ -237,42 +237,23 @@ project.</p>
 
 
 
-<p dir="ltr">JGraphT and <a href="http://www.jgraph.com/">JGraph</a> are two different libraries which are optimized 
-for different purposes. </p>
-
-
-
-
+<p dir="ltr">JGraphT and <a href="http://www.jgraph.com/">JGraph</a> are two different libraries which are intended for different purposes. </p>
 
 <p>JGraphT:</p>
 <ul>
-  <li>is optimized for data models and algorithms.</li>
-  <li>has a clean and simple API that is designed for safe &quot;auto-complete 
-  programming&quot;.</li>
-  <li>is designed to support high-performance and large-scale applications.</li>
-  <li>can handle graphs with a few <i>millions</i> vertices and edges.</li>
-  <li>provides visualizations by using JGraph (<a href="visualizations.html">demo</a>).</li>
+  <li>is focused on data structures and algorithms.</li>
 </ul>
-
-
-
-
 
 <p>JGraph:</p>
 <ul>
-  <li>is a swing-style graph component optimized for visualization and GUI-based editing.</li>
-  <li>has a more complicated API with non-trivial casting and swing dependency; <span class="hw">requires 
-  fluency with its documentation.</span></li>
-  <li>is slower and consumes more resources.</li>
+  <li>is focused on rendering and GUI-based editing.</li>
 </ul>
 
 
-
-
-
-<p>The two libraries are complementary and can be used together. You will probably find JGraphT easier to start with and more eligible for 
-your data model. When you need graph visualizations, you can add JGraph to do 
-them for you.</p>
+<p>The two libraries are complementary and can be used together via
+the JGraphModelAdapter provided by JGraphT; this adapter allows a
+JGraphT graph data structure to be used as the model being viewed and
+controlled via JGraph.</p>
 
 <h2>Your Improvements</h2>
 <p>If you add new features or fix bugs please
